@@ -1,17 +1,17 @@
 const staticCacheName = 'site-static-v4';
 const dynamicCacheName = 'site-dynamic-v4';
 const assets = [
-  '/',
-  '/index.html',
-  '/js/app.js',
-  '/js/ui.js',
-  '/js/materialize.min.js',
-  '/css/styles.css',
-  '/css/materialize.min.css',
-  '/img/dish.png',
+  '/PWA-test/',
+  '/PWA-test/index.html',
+  '/PWA-test/js/app.js',
+  '/PWA-test/js/ui.js',
+  '/PWA-test/js/materialize.min.js',
+  '/PWA-test/css/styles.css',
+  '/PWA-test/css/materialize.min.css',
+  '/PWA-test/img/dish.png',
   'https://fonts.googleapis.com/icon?family=Material+Icons',
   'https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2',
-  '/pages/fallback.html'
+  '/PWA-test/pages/fallback.html'
 ];
 
 // cache size limit function
@@ -65,7 +65,7 @@ self.addEventListener('fetch', evt => {
         });
       }).catch(() => {
         if(evt.request.url.indexOf('.html') > -1){
-          return caches.match('/pages/fallback.html');
+          return caches.match('/PWA-test/pages/fallback.html');
         } 
       })
     );
